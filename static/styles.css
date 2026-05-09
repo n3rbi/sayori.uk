@@ -1,0 +1,25 @@
+.sayori-img {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.sayori-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    z-index: 100 !important;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.sayori-img:nth-child(odd) {
+    animation: float 4s ease-in-out infinite;
+}
+
+.sayori-img:nth-child(even) {
+    animation: float 5s ease-in-out infinite 1s;
+}
